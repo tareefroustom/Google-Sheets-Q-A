@@ -28,16 +28,17 @@ async function concatenateMessages(json) {
 }
 
 export const post: APIRoute = async (context) => {
-  console.log(context);
+  
   const body = await context.request.json();
   const question = await concatenateMessages(JSON.stringify(body));
   
   
   const referer = await context.request.headers.get('referer');
   const searchParams = new URLSearchParams(referer.split('?')[1]);
+  console.log(searchParams);
   //const documentUrl = searchParams.get('Document_URL');
   const userid = searchParams.get('id');
-  
+  console.log(userid);
   //const params = new URLSearchParams(context.request.headers.referer.split('?')[0]);
   //const documentUrl = params.get('Document_URL');
   
