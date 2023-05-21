@@ -64,7 +64,8 @@ export const post: APIRoute = async (context) => {
     throw new Error(`Request failed with status ${response.status}`);
   }
 
-  const responseData = await response.json();  
+  const responseData = await response.json(); 
+  console.log(responseData)
   const results = responseData.results.split('\n\n');
   const text = results.join('\n');
   return new Response(text, {
