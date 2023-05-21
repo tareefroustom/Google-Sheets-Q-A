@@ -53,7 +53,7 @@ export const post: APIRoute = async (context) => {
       //sheet_name: 'gpt panda',
       //selected_sheet: ['Tester'],
       operation: 'ask-bot',
-      Question: question,
+      question: question,
       //document_url: documentUrl,
       //...body // include any additional data from the original request body
     })
