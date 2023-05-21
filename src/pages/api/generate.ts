@@ -29,6 +29,7 @@ async function concatenateMessages(json) {
 
 export const post: APIRoute = async (context) => {
   console.log(context);
+  console.log("Tareef")
   const body = await context.request.json();
   const question = await concatenateMessages(JSON.stringify(body));
   
