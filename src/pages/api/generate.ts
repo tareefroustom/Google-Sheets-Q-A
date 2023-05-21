@@ -29,16 +29,16 @@ async function concatenateMessages(json) {
 
 export const post: APIRoute = async (context) => {
   
-  const body = await context.request.json();
-  const question = await concatenateMessages(JSON.stringify(body));
+  //const body = await context.request.json();
+  //const question = await concatenateMessages(JSON.stringify(body));
   
   
-  const referer = await context.request.headers.get('referer');
-  const searchParams = new URLSearchParams(referer.split('?')[1]);
-  console.log(searchParams);
+  //const referer = await context.request.headers.get('referer');
+  //const searchParams = new URLSearchParams(referer.split('?')[1]);
+  //console.log(searchParams);
   //const documentUrl = searchParams.get('Document_URL');
-  const userid = searchParams.get('id');
-  console.log(userid);
+  //const userid = searchParams.get('id');
+  //console.log(userid);
   //const params = new URLSearchParams(context.request.headers.referer.split('?')[0]);
   //const documentUrl = params.get('Document_URL');
   
@@ -50,7 +50,7 @@ export const post: APIRoute = async (context) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      bot_id: userid,
+      bot_id: "6e6cf576-69e1-410b-9036-d870922f556a",
       //sheet_name: 'gpt panda',
       //selected_sheet: ['Tester'],
       operation: 'ask-bot',
