@@ -66,9 +66,9 @@ export const post: APIRoute = async (context) => {
 
   const responseData = await response.json(); 
   console.log(responseData)
-  const results = responseData.results.split('\n\n');
-  const text = results.join('\n');
-  return new Response(text, {
+  //const results = responseData.results.split('\n\n');
+  //const text = results.join('\n');
+  return new Response(responseData.results, {
     headers: {
       'Content-Type': 'text/plain'
     }
